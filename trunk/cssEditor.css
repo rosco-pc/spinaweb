@@ -1,0 +1,345 @@
+#btnew, #btsave, #btcomp, #btport, #btprog, #btdbg, #btconn
+{
+    width: 110px;
+}
+
+div
+{
+    position: relative;
+}
+body
+{
+    /* margin: 3em auto; */
+    padding: 0px 1em;
+    line-height: 1.5;
+    font-family: Droid Sans, Arial, sans-serif;
+    max-width: 64.3em;
+}
+h1
+{
+    margin: 0px;
+    letter-spacing: -3px;
+    font-size: 3.23em;
+    font-weight: bold;
+}
+h2
+{
+    margin: 0.5em 0px;
+    letter-spacing: -1px;
+    font-size: 1.23em;
+    font-weight: bold;
+}
+h3
+{
+    margin: 0.4em 0px;
+    font-size: 1em;
+    font-weight: bold;
+}
+pre
+{
+    padding: 1em;
+    border-radius: 6px;
+    background-color: rgb(238, 238, 238);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+pre.code
+{
+    margin: 0px 1em;
+}
+.grey
+{
+    padding: 0.5em 1em;
+    line-height: 1.2em;
+    font-size: 2.2em;
+    margin-top: 0.5em;
+    position: relative;
+}
+img.logo
+{
+    right: -25px;
+    bottom: 4px;
+    position: absolute;
+}
+a:link
+{
+    color: rgb(223, 0, 25);
+    text-decoration: none;
+    cursor: pointer;
+}
+a:visited
+{
+    color: rgb(223, 0, 25);
+    text-decoration: none;
+    cursor: pointer;
+}
+.quasilink
+{
+    color: rgb(223, 0, 25);
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover
+{
+    color: rgb(128, 0, 4);
+}
+.quasilink:hover
+{
+    color: rgb(128, 0, 4);
+}
+h1 a:link
+{
+    color: black;
+}
+h1 a:visited
+{
+    color: black;
+}
+h1 a:hover
+{
+    color: black;
+}
+ul
+{
+    margin: 0px;
+    padding-left: 1.2em;
+}
+a.download
+{
+    padding: 0.5em 0px;
+    border-radius: 6px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.23em;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 1em;
+    display: block;
+    background-color: rgb(223, 0, 25);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+a.download:hover
+{
+    background-color: rgb(187, 0, 16);
+}
+.rel
+{
+    margin-bottom: 0px;
+}
+.rel-note
+{
+    color: rgb(119, 119, 119);
+    font-size: 0.9em;
+    margin-top: 0.1em;
+}
+.logo-braces
+{
+    top: -4px;
+    color: rgb(223, 0, 25);
+    position: relative;
+}
+.blk
+{
+    float: left;
+}
+.left
+{
+    width: 37em;
+    padding-right: 6.53em;
+    padding-bottom: 1em;
+}
+.left1
+{
+    width: 15.24em;
+    padding-right: 6.45em;
+}
+.left2
+{
+    width: 15.24em;
+}
+.right
+{
+    width: 20.68em;
+}
+.leftbig
+{
+    width: 42.44em;
+    padding-right: 6.53em;
+}
+.rightsmall
+{
+    width: 15.24em;
+}
+.clear::after
+{
+    height: 0px;
+    clear: both;
+    font-size: 0px;
+    display: block;
+    visibility: hidden;
+    content: " ";
+}
+.clear
+{
+    display: inline-block;
+}
+* html .clear
+{
+    height: 1%;
+}
+.clear
+{
+    display: block;
+}
+.cm-s-default
+{
+    background: rgb(255, 255, 238);
+    color: black;
+}
+.cm-s-default span.cm-keyword
+{
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+.cm-s-default span.cm-number
+{
+    color: darkgreen;
+}
+.cm-s-default span.cm-variable
+{
+    color: black;
+}
+.cm-s-default span.cm-operator
+{
+    color: darkgreen;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+.cm-s-default span.cm-codecomment
+{
+    color: rgb(102, 136, 136);
+}
+.cm-s-default span.cm-nonecodecomment
+{
+    color: rgb(102, 136, 136);
+}
+.cm-s-default span.cm-doccomment
+{
+    color: rgb(0, 0, 102);
+}
+.cm-s-default span.cm-nonedoccomment
+{
+    color: rgb(0, 0, 102);
+}
+.cm-s-default span.cm-boldcomment
+{
+    color: rgb(0, 0, 102);
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+.cm-s-default span.cm-string
+{
+    color: darkgreen;
+}
+.cm-s-default span.cm-error
+{
+    color: rgb(255, 0, 0);
+}
+.cm-s-default span.cm-normal
+{
+    color: black;
+}
+.CodeMirror
+{
+    line-height: 1em;
+    font-family: parallax, monospace;
+    font-size: 12pt;
+}
+.CodeMirror-scroll
+{
+    height: 600px;
+    overflow: auto;
+}
+.CodeMirror-gutter
+{
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    border-right-color: rgb(238, 238, 238);
+    border-right-width: 1px;
+    border-right-style: solid;
+    position: absolute;
+    min-width: 2em;
+    background-color: rgb(247, 247, 247);
+}
+.CodeMirror-gutter-text
+{
+    padding: 0.4em 0.2em 0.4em 0.4em;
+    text-align: right;
+    color: rgb(170, 170, 170);
+}
+.CodeMirror-lines
+{
+    padding: 0.4em;
+}
+.CodeMirror pre
+{
+    background: none;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    font-family: inherit;
+    font-size: inherit;
+    white-space: pre;
+    -ms-word-wrap: normal;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
+}
+.CodeMirror textarea
+{
+    font-family: inherit !important;
+    font-size: inherit !important;
+}
+.CodeMirror-cursor
+{
+    border-left-color: black !important;
+    border-left-width: 1px !important;
+    border-left-style: solid !important;
+    visibility: hidden;
+    position: absolute;
+    z-index: 10;
+}
+.CodeMirror-focused .CodeMirror-cursor
+{
+    visibility: visible;
+}
+span.CodeMirror-selected
+{
+    background: rgb(204, 204, 204) !important;
+    color: highlighttext !important;
+}
+.CodeMirror-focused span.CodeMirror-selected
+{
+    background: highlight !important;
+}
+.CodeMirror-matchingbracket
+{
+    color: rgb(0, 255, 0) !important;
+}
+.CodeMirror-nonmatchingbracket
+{
+    color: rgb(255, 34, 34) !important;
+}
+.CodeMirror
+{
+    border: 1px solid black;
+}
+.activeline
+{
+    background: #f0fcff !important;
+}
+

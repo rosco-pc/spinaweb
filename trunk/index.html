@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Spinny Weby Devy</title>
+    <link rel="stylesheet" type="text/css" href="cssEditor.css">
+
+    <script language="javascript" src="ports.js"></script>
+    <script language="javascript" src="terminal.js"></script>
+    <script language="javascript" src="codemspin.js"></script>
+    <script language="javascript" src="codemirror.js"></script>
+    <script language="javascript" src="editor.js"></script>
+</head>
+
+<body onload="bodyOnLoad();">
+
+    <div style="display:inline-table;border-collapse:collapse;border-spacing:0;width:600px">
+        <div style="dislplay:table-row;margin:0;padding:0;width:700px">
+            <div style="display:table-cell;padding:0;border-width:0px;border-style:solid;border-color:blsck;vertical-align:top;width:400px">
+                <div>
+                    <b>Spinny Weby Devy</b>
+                </div>
+                <div>
+                    <input type="button" class="ebtn" name="btnew"  id="btnew"  onclick="btNewClick();" value="New" />
+                    <input type="button" class="ebtn" name="btsave" id="btsave" onclick="btSaveClick();" value="Save" />
+                </div>
+                <div>
+                    File
+                    <!--
+                    <input type="button" class="ebtn" name="btload" id="btload"
+                        title="Load file to editor"
+                        onclick="btLoadClick();" value="LD"
+                    >
+                    -->
+                    <textarea name="fileauto" id="fileauto" cols="21"
+                        title="Enter * or first letter for file list. Select to load."
+                        onclick="acceptFileSuggest();"
+                        style="position:absolute;left:42px;top:2px;z-index:11;visibility:hidden;" >
+                    </textarea>
+                    <input type="text"
+                        name="filename" id="filename" size="21"
+                        title="Enter * or first letter for file list. Select to load."
+                        onkeyup="suggestFile();"
+                        style="position:absolute;left:42px;top:2px;background:transparent;z-index:10;"
+                    >
+                </div>
+                <div>
+                    <input type="button" class="ebtn" name="btcomp" id="btcomp"
+                        title="Compile code in the editor"
+                        onclick="btCompileClick();" value="Compile"
+                    >
+                    <input type="button" class="ebtn" name="btport" id="btport"
+                        title="Identify ports having Propeller chip(s)."
+                        onclick='suggestPort();' value="Identify"
+                    >
+                </div>
+                <div>
+                    Port
+                    <textarea name="portauto" id="portauto" cols="21"
+                        title="Click identify for ports. Select to use."
+                    onclick="acceptPortSuggest();"
+                    style="position:absolute;left:42px;top:2px;z-index:11;visibility:hidden;" >
+                    </textarea>
+                    <input type="text" name="portname" id="portname" size="21"
+                        title="Click identify for ports. Select to use." onclick="suggestPort();"
+                        style="position:absolute;left:42px;top:2px;background:transparent;z-index:10;"
+                    >
+                </div>
+                <div>
+                    <input type="button" class="ebtn" name="btprog" id="btprog"
+                        type="Program Propeller with compiled code."
+                        onclick="btProgramClick();" value="Program"
+                    >
+                    <input type="button" class="ebtn" name="btdbg" id="btdbg"
+                        title="Program, run, and start console." style="width:110;"
+                        onclick='btDebugClick("btdbg", "portname")' value="Debug"
+                    >
+                    <br/>
+                </div>
+                <div>
+                    <input type="button" class="ebtn" name="btconn" id="btconn"
+                        title="Connect and start console." style="width:110;"
+                        onclick='btConnectClick("btconn", "portname")' value="Connect"
+                    >
+                    <input type="text" name="baudrate" id="baudrate" size="8" style="width:109px" value="115200"
+                        title="Baudrate for port connection."
+                    >
+                </div>
+            </div>
+            <div style="display:table-cell;padding:0;border-width:0px;border-style:solid;vertical-align:top;width:1000px">
+                <textarea name="status" id="status" rows="11" style="width:100%">
+                </textarea>
+            </div>
+        </div>
+        <div id="termindiv" style="display:table-row;border-width:0px" title="Terminal input area. Connect to show.">
+            <div style="display:table-cell;padding:0px">
+                <input type="text" id="termin" disabled="disabled" size="60" value=""
+                    style="font-family:monospace;height:0px;visibility:hidden"
+                    onkeydown="termKeyDown();"
+                >
+            </div>
+        </div>
+        <div id="termoutdiv" style="display:table-row;border-width:0px" title="Terminal output area. Connect to show.">
+            <div style="display:table-cell;padding:0px">
+                <textarea id="termout" disabled="disabled" rows="30" cols="68" value=""
+                    style="height:0px;visibility:hidden;word-wrap:on;">
+                </textarea>
+            </div>
+        </div>
+        <div style="display:table-row;">
+            <div style="display:table-cell;border-width:1px;">
+                <textarea name="code" id="code"> </textarea>
+            </div>
+        </div>
+        <div style="display:table-row;width:95%">
+            <div style="font-size: 11pt;">
+                This editor is uses a modified version of the 
+                <a href="http://codemirror.net/" target="_blank">CodeMirror 2</a>
+                Javascript-based code editor.
+                If you are using Internet Explorer and want snappier performance from Javascript, click
+                <a href="http://www.google.com/chromeframe/eula.html" target="_blank">here</a>
+                to install Google's Chrome Frame.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>    
